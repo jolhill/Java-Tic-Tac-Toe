@@ -56,7 +56,7 @@ public class TicTacToe extends JFrame {
 		}
 		return iOut;
 	}
-	
+
 	private void played(JButton button){
 		aBoard[getButtonNumber(button)] = getTurn();
 		if(getTurn() == 1){
@@ -65,6 +65,7 @@ public class TicTacToe extends JFrame {
 		else{
 			button.setText("O");
 		}
+		button.removeActionListener(bh);
 		switchTurn();
 	}
 	
